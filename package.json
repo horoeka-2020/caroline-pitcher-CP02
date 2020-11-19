@@ -1,0 +1,35 @@
+{
+  "name": "caroline-pitcher-cp02",
+  "version": "0.1.0",
+  "description": "Creating a repo for my personal project",
+  "repository": "https://github.com/horoeka-2020/caroline-pitcher-CP02.git",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "run-p dev:server dev:client",
+    "dev:client": "webpack --watch",
+    "dev:server": "nodemon --watch server",
+    "start": "node server",
+    "postinstall": "webpack",
+    "test": "jest --watchAll",
+    "lint": "eslint --ext .js,.jsx ."
+  },
+  "author": "Caroline Pitcher",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/node": "^7.12.6"
+  }
+}
